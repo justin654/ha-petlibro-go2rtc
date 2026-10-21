@@ -1,0 +1,23 @@
+name: Petlibro Camera (go2rtc)
+version: "1.9.14-petlibro.3-1"
+slug: petlibro_go2rtc
+description: Local LAN video for Petlibro camera feeders (PLAF203) via a patched go2rtc. No feeder modification.
+url: https://github.com/justin654/ha-petlibro-go2rtc
+arch:
+  - amd64
+  - aarch64
+  - armv7
+init: false
+startup: services
+boot: auto
+host_network: true
+options:
+  camera_ip: ""
+  camera_uid: ""
+  quality: hd
+  audio: false
+schema:
+  camera_ip: str
+  camera_uid: password
+  quality: list(hd|sd)
+  audio: bool
